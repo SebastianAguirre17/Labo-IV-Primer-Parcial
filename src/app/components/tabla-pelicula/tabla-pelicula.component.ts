@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { PeliculaModel } from 'src/app/models/models.model';
 
 @Component({
-  selector: 'app-tabla-pelicula',
-  templateUrl: './tabla-pelicula.component.html',
-  styleUrls: ['./tabla-pelicula.component.css']
+    selector: 'app-tabla-pelicula',
+    templateUrl: './tabla-pelicula.component.html',
+    styleUrls: ['./tabla-pelicula.component.css']
 })
 export class TablaPeliculaComponent implements OnInit {
 
-  constructor() { }
+    @Input() peliculas: PeliculaModel[] = [];
 
-  ngOnInit(): void {
-  }
+    constructor() { }
+
+    ngOnInit(): void {
+    }
 
 }

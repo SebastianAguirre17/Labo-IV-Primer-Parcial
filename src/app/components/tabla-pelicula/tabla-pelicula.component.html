@@ -1,1 +1,22 @@
-<p>tabla-pelicula works!</p>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Fecha de Estreno</th>
+            <th scope="col">Cantidad de Público</th>
+            <th scope="col">Foto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pelicula of peliculas">
+            <th> {{ pelicula.id }} </th>
+            <td> {{ pelicula.nombre }} </td>
+            <td> {{ pelicula.tipo }} </td>
+            <td> {{ pelicula.fecha_estreno }} </td>
+            <td> {{ pelicula.cantidad_publico }} </td>
+            <td> <img [src]="pelicula.foto" alt="" width="100" height="100"></td>
+        </tr>
+    </tbody>
+</table>

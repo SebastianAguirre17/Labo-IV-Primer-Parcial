@@ -12,7 +12,7 @@ const routes: Routes = [
     { path: 'bienvenido', component: BienvenidoComponent },
     { path: 'busqueda', component: BusquedaComponent },
     { path: 'peliculas/alta', component: PeliculaAltaComponent },
-    { path: 'pelicula/listado', component: PeliculasListadoComponent },
+    { path: 'peliculas/listado', component: PeliculasListadoComponent },
     { path: 'actor/alta', component: ActorAltaComponent },
     { path: 'actor/listado', component: ActorListadoComponent },
     { path: '**', pathMatch: 'full', component: HomeComponent },

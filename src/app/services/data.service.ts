@@ -1,21 +1,31 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { AuthService } from './auth.service';
-
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
     providedIn: 'root'
 })
 export class DataService {
 
-    constructor(private afs: AngularFirestore, public authSrv: AuthService) { }
+    private url = 'https://primerparciallaboiv.firebaseio.com/';
 
-    GetCollection(elements: string) {
-        return new Promise<any>((resolve, reject) => {
-            this.afs.collection(elements).valueChanges().subscribe(snapshots => {
-                resolve(snapshots)
-            })
+    constructor(private http: HttpClient) { }
+
+    getColeccion(coleccion: string) {
+        return this.http.get(`${this.url}/${coleccion}.json`);
+    }
+
+    postRegistro(coleccion: string, registro: any) {
+        return this.http.post(`${this.url}/${coleccion}.json`, registro);
+    }
+
+    putRegistro(coleccion: string, registro: any) {
+        return this.http.put(`${this.url}/${coleccion}/${registro.id}.json`, registro);
+    }
+
+
+    createColection(arrElementos: any[], coleccion: string) {
+        arrElementos.forEach(element => {
+            this.postRegistro(coleccion, element).subscribe();
         })
     }
 }

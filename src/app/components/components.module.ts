@@ -41,7 +41,8 @@ import { BienvenidoComponent } from './bienvenido/bienvenido.component';
         PeliculasListadoComponent,
         TablaPeliculaComponent,
         DetallePeliculaComponent,
-        BienvenidoComponent
+        BienvenidoComponent,
+        FormsModule
     ]
 })
 export class ComponentsModule { }
