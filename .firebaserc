@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "primerparciallaboiv": {
+      "hosting": {
+        "PrimerParcial": [
+          "primerparciallaboiv"
+        ]
+      }
+    }
+  }
+}
