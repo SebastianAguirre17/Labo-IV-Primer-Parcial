@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table table-hover table-bordered">
     <thead class="thead-dark">
         <tr>
             <th scope="col">Id</th>
@@ -10,12 +10,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let pelicula of peliculas">
+        <tr *ngFor="let pelicula of peliculas" (click)="seleccionarPelicula(pelicula)">
             <th> {{ pelicula.id }} </th>
             <td> {{ pelicula.nombre }} </td>
             <td> {{ pelicula.tipo }} </td>
-            <td> {{ pelicula.fecha_estreno }} </td>
-            <td> {{ pelicula.cantidad_publico }} </td>
+            <td> {{ pelicula.fecha_de_estreno }} </td>
+            <td> {{ pelicula.cantidad_de_publico }} </td>
             <td> <img [src]="pelicula.foto" alt="" width="100" height="100"></td>
         </tr>
     </tbody>

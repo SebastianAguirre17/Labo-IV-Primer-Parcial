@@ -1,1 +1,15 @@
-<p>detalle-pelicula works!</p>
+<div class="card border-dark mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img [src]="pelicula.foto" class="card-img" alt="..." width="250" height="250">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h2 class="card-title"> {{ pelicula.nombre | uppercase }} </h2>
+                <h5 class="card-title"> {{ pelicula.nombre | uppercase }} </h5>
+                <p class="card-text"> Se estrenó el día: {{ pelicula.fecha_de_estreno }} </p>
+                <p class="card-text"> Fue visto por: {{ pelicula.cantidad_de_publico }} </p>
+            </div>
+        </div>
+    </div>
+</div>

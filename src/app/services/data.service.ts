@@ -22,6 +22,13 @@ export class DataService {
         return this.http.put(`${this.url}/${coleccion}/${registro.id}.json`, registro);
     }
 
+    getRegistro(coleccion: string, id: string) {
+        return this.http.delete(`${this.url}/${coleccion}/${id}.json`);
+    }
+
+    deleteRegistro(coleccion: string, id: string) {
+        return this.http.delete(`${this.url}/${coleccion}/${id}.json`);
+    }
 
     createColection(arrElementos: any[], coleccion: string) {
         arrElementos.forEach(element => {

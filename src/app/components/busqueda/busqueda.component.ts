@@ -23,11 +23,31 @@ export class BusquedaComponent implements OnInit {
 
     getPeliculas() {
         this.dataSrv.getColeccion('peliculas')
-            .subscribe((resp: PeliculaModel[]) => this.peliculas = resp);
+            .subscribe(resp => this.peliculas = this.crearArrDePeliculas(resp));
     }
 
     getActores() {
         this.dataSrv.getColeccion('actores')
             .subscribe(resp => console.log(resp));
+    }
+
+    tomarPeliculaParaDetalles(pelicula: PeliculaModel) {
+        this.pelicula = pelicula;
+    }
+
+    private crearArrDePeliculas(peliculasObj: Object) {
+        const peliculas: PeliculaModel[] = [];
+
+        if (peliculasObj === null)
+            return [];
+
+        Object.keys(peliculasObj).forEach(key => {
+            const pelicula: PeliculaModel = peliculasObj[key];
+            pelicula.id = key;
+
+            peliculas.push(pelicula);
+        })
+
+        return peliculas;
     }
 }
