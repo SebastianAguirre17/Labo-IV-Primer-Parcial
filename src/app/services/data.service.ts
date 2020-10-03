@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { PeliculaModel } from '../models/models.model';
+import { ActorModel, PeliculaModel } from '../models/models.model';
 
 @Injectable({
     providedIn: 'root'
@@ -51,5 +51,21 @@ export class DataService {
         })
 
         return peliculas;
+    }
+
+    crearArrDeActores(actoresObj: Object) {
+        const actores: ActorModel[] = [];
+
+        if (actoresObj === null)
+            return [];
+
+        Object.keys(actoresObj).forEach(key => {
+            const actor: ActorModel = actoresObj[key];
+            actor.id = key;
+
+            actores.push(actor);
+        })
+
+        return actores;
     }
 }

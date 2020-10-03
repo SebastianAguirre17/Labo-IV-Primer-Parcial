@@ -27,11 +27,7 @@ export class BusquedaComponent implements OnInit {
             .subscribe(resp => this.peliculas = this.dataSrv.crearArrDePeliculas(resp));
     }
 
-    getActores() {
-        this.dataSrv.getColeccion('actores')
-            .subscribe(resp => console.log(resp));
-    }
-
+    
     tomarPeliculaParaDetalles(pelicula: PeliculaModel) {
         this.pelicula = pelicula;
     }

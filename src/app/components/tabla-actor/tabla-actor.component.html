@@ -1,6 +1,6 @@
 <div class="card-deck">
-    <div class="card" *ngFor="let actor of actores">
-        <img [src]="actor.foto" class="card-img-top" alt="..." with>
+    <div class="card" *ngFor="let actor of actores; let i = index" >
+        <img [src]="actor.foto" class="card-img-top" alt="..." width="250" height="250" (click)="seleccionarActor(actor, i)">
         <div class="card-body">
             <h3 class="card-title"> {{ actor.nombre }} </h3>
         </div>
