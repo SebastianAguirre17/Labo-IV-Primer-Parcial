@@ -13,7 +13,8 @@ export class PeliculaModel {
     tipo: Tipo;
     fecha_de_estreno: string;
     cantidad_de_publico: number;
-    foto: string;
+    foto?: string;
+    actor?: ActorModel;
 }
 
 export type Tipo = 'terror' | 'comedia' | 'amor' | 'otros';

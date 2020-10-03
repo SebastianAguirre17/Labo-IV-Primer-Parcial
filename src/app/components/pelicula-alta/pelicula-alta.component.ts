@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActorModel } from 'src/app/models/models.model';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActorModel, PeliculaModel } from 'src/app/models/models.model';
 import { DataService } from 'src/app/services/data.service';
+import Swal from 'sweetalert2';
 
 @Component({
     selector: 'app-pelicula-alta',
@@ -63,7 +64,22 @@ export class PeliculaAltaComponent implements OnInit {
             });
         }
 
-        // this.forma.reset();
+        const pelicula = new PeliculaModel();
+        pelicula.nombre = this.forma.get('nombre').value;
+        pelicula.tipo = this.forma.get('tipo').value;
+        pelicula.fecha_de_estreno = this.forma.get('fecha').value;
+        pelicula.cantidad_de_publico = this.forma.get('publico').value;
+        pelicula.actor = this.actor;
+
+        Swal.fire({
+            title: 'Espere ...',
+            icon: 'info'
+        })
+        Swal.showLoading();
+        this.dataSrv.postRegistro('peliculas', pelicula).subscribe(
+            resp => Swal.close()
+        );
+        this.forma.reset();
     }
 
     tomarActor(actor: ActorModel) {

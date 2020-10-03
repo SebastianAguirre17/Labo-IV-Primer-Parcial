@@ -9,6 +9,7 @@
                 <h5 class="card-title"> {{ pelicula.tipo | uppercase }} </h5>
                 <p class="card-text"> Se estrenó el día: {{ pelicula.fecha_de_estreno }} </p>
                 <p class="card-text"> Fue visto por: {{ pelicula.cantidad_de_publico }} personas</p>
+                <p class="card-text" *ngIf="pelicula.actor"> Actor: {{ pelicula?.actor.nombre }} </p>
                 <button class="btn btn-danger btn-block" *ngIf="borrado === 1" (click)="borrarPelicula(pelicula.id)">
                     <i class="fas fa-trash"></i> Borrar
                 </button>
