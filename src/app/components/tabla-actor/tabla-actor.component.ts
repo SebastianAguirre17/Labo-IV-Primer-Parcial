@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActorModel } from 'src/app/models/models.model';
 
 @Component({
@@ -9,6 +9,7 @@ import { ActorModel } from 'src/app/models/models.model';
 export class TablaActorComponent implements OnInit {
 
     @Input() actores: ActorModel[] = [];
+    @Output() eventoActorSeleccionado = new EventEmitter<ActorModel>();
 
     constructor() { }
 
@@ -16,7 +17,8 @@ export class TablaActorComponent implements OnInit {
     }
 
     seleccionarActor(actor: ActorModel, index: number) {
-        console.log(actor, index);
+        // console.log(index);
+        this.eventoActorSeleccionado.emit(actor);
     }
 
 }

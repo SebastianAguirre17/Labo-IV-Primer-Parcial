@@ -24,5 +24,4 @@ export class ActorListadoComponent implements OnInit {
             .subscribe(resp => this.actores = this.dataSrv.crearArrDeActores(resp));
     }
 
-
 }
