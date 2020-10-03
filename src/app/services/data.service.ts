@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { PeliculaModel } from '../models/models.model';
 
 @Injectable({
     providedIn: 'root'
@@ -34,5 +35,21 @@ export class DataService {
         arrElementos.forEach(element => {
             this.postRegistro(coleccion, element).subscribe();
         })
+    }
+
+    crearArrDePeliculas(peliculasObj: Object) {
+        const peliculas: PeliculaModel[] = [];
+
+        if (peliculasObj === null)
+            return [];
+
+        Object.keys(peliculasObj).forEach(key => {
+            const pelicula: PeliculaModel = peliculasObj[key];
+            pelicula.id = key;
+
+            peliculas.push(pelicula);
+        })
+
+        return peliculas;
     }
 }

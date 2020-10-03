@@ -10,7 +10,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let pelicula of peliculas" (click)="seleccionarPelicula(pelicula)">
+        <tr *ngFor="let pelicula of peliculas; let i = index" (click)="seleccionarPelicula(pelicula, i)">
             <th> {{ pelicula.id }} </th>
             <td> {{ pelicula.nombre }} </td>
             <td> {{ pelicula.tipo }} </td>

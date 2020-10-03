@@ -9,6 +9,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PeliculaAltaComponent } from './components/pelicula-alta/pelicula-alta.component';
 
 const routes: Routes = [
+    { path: '', component: BusquedaComponent },
     { path: 'bienvenido', component: BienvenidoComponent },
     { path: 'busqueda', component: BusquedaComponent },
     { path: 'peliculas/alta', component: PeliculaAltaComponent },

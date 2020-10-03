@@ -10,8 +10,9 @@ import { PeliculaModel } from 'src/app/models/models.model';
 })
 export class BusquedaComponent implements OnInit {
 
-    pelicula: PeliculaModel = new PeliculaModel()
+    pelicula: PeliculaModel;
     peliculas: PeliculaModel[] = [];
+    index: number;
 
     constructor(private dataSrv: DataService) { }
 
@@ -23,7 +24,7 @@ export class BusquedaComponent implements OnInit {
 
     getPeliculas() {
         this.dataSrv.getColeccion('peliculas')
-            .subscribe(resp => this.peliculas = this.crearArrDePeliculas(resp));
+            .subscribe(resp => this.peliculas = this.dataSrv.crearArrDePeliculas(resp));
     }
 
     getActores() {
@@ -35,19 +36,8 @@ export class BusquedaComponent implements OnInit {
         this.pelicula = pelicula;
     }
 
-    private crearArrDePeliculas(peliculasObj: Object) {
-        const peliculas: PeliculaModel[] = [];
-
-        if (peliculasObj === null)
-            return [];
-
-        Object.keys(peliculasObj).forEach(key => {
-            const pelicula: PeliculaModel = peliculasObj[key];
-            pelicula.id = key;
-
-            peliculas.push(pelicula);
-        })
-
-        return peliculas;
+    tomarIndexPelicula(index: number) {
+        this.index = index;
     }
+
 }

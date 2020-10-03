@@ -1,9 +1,10 @@
-<div class="jumbotron jumbotron-fluid overflow-auto">
+<div class="jumbotron jumbotron-fluid overflow-auto" [ngClass]="{'altura': pelicula != null}">
     <div class="container">
         <div class="row">
             <div class="col">
                 <app-tabla-pelicula [peliculas]="peliculas"
-                                    (peliculaSeleccionada)="tomarPeliculaParaDetalles($event)">
+                                    (peliculaSeleccionada)="tomarPeliculaParaDetalles($event)"
+                                    (indexPeliculaSeleccionada)="tomarIndexPelicula($event)">
                 </app-tabla-pelicula>
             </div>
         </div>
@@ -12,7 +13,8 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <app-detalle-pelicula [pelicula]="pelicula"></app-detalle-pelicula>
+            <app-detalle-pelicula   [pelicula]="pelicula">
+            </app-detalle-pelicula>
         </div>
     </div> 
 </div> 

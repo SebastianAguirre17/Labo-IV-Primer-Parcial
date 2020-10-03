@@ -1,0 +1,8 @@
+<div class="card-deck">
+    <div class="card" *ngFor="let actor of actores">
+        <img [src]="actor.foto" class="card-img-top" alt="..." with>
+        <div class="card-body">
+            <h3 class="card-title"> {{ actor.nombre }} </h3>
+        </div>
+    </div>
+</div>
