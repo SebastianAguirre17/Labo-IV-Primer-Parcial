@@ -13,6 +13,13 @@ import { TablaPeliculaComponent } from './tabla-pelicula/tabla-pelicula.componen
 import { DetallePeliculaComponent } from './detalle-pelicula/detalle-pelicula.component';
 import { BienvenidoComponent } from './bienvenido/bienvenido.component';
 import { TablaActorComponent } from './tabla-actor/tabla-actor.component';
+import { TablaProductosComponent } from './tabla-productos/tabla-productos.component';
+import { ProductosComponent } from './productos/productos.component';
+import { ProductoAltaComponent } from './producto-alta/producto-alta.component';
+import { VentasListadoComponent } from './ventas-listado/ventas-listado.component';
+import { NuevaVentaComponent } from './nueva-venta/nueva-venta.component';
+import { BusquedaProductosComponent } from './busqueda-productos/busqueda-productos.component';
+import { BotonComponent } from './boton/boton.component';
 
 
 
@@ -27,7 +34,14 @@ import { TablaActorComponent } from './tabla-actor/tabla-actor.component';
         TablaPeliculaComponent,
         DetallePeliculaComponent,
         BienvenidoComponent,
-        TablaActorComponent
+        TablaActorComponent,
+        TablaProductosComponent,
+        ProductosComponent,
+        ProductoAltaComponent,
+        VentasListadoComponent,
+        NuevaVentaComponent,
+        BusquedaProductosComponent,
+        BotonComponent
     ],
     imports: [
         CommonModule,

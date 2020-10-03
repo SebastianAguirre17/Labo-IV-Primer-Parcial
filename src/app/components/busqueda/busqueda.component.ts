@@ -1,6 +1,6 @@
 import { DataService } from './../../services/data.service';
 import { Component, OnInit } from '@angular/core';
-import { peliculasData, actoresData } from 'src/app/shared/data';
+import { peliculasData, actoresData, productosData } from 'src/app/shared/data';
 import { PeliculaModel } from 'src/app/models/models.model';
 
 @Component({
@@ -19,7 +19,6 @@ export class BusquedaComponent implements OnInit {
     ngOnInit(): void {
         this.getPeliculas();
         // this.dataSrv.createColection(peliculasData, 'peliculas');
-        // this.dataSrv.createColection(actoresData, 'actores');
     }
 
     getPeliculas() {

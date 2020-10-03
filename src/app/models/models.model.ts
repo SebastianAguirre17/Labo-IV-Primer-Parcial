@@ -1,3 +1,7 @@
+export type Tipo = 'terror' | 'comedia' | 'amor' | 'otros';
+
+export type TipoProducto = 'liquido' | 'solido';
+
 export class ActorModel {
     id: string;
     nombre: string;
@@ -17,4 +21,11 @@ export class PeliculaModel {
     actor?: ActorModel;
 }
 
-export type Tipo = 'terror' | 'comedia' | 'amor' | 'otros';
+export class ProductoModel {
+    id: string;
+    descripcion: string;
+    tipo: TipoProducto;
+    fechaDeVencimiento: string;
+    precio: number;
+    rutaDeFoto?: string;
+}
