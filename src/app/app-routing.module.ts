@@ -13,7 +13,7 @@ import { VentasListadoComponent } from './components/ventas-listado/ventas-lista
 import { NuevaVentaComponent } from './components/nueva-venta/nueva-venta.component';
 
 const routes: Routes = [
-    { path: '', component: BusquedaComponent },
+    { path: '', component: ProductosComponent },
     { path: 'bienvenido', component: BienvenidoComponent },
     // { path: 'busqueda', component: BusquedaComponent },
     { path: 'peliculas/alta', component: PeliculaAltaComponent },
