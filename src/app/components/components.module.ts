@@ -20,6 +20,7 @@ import { VentasListadoComponent } from './ventas-listado/ventas-listado.componen
 import { NuevaVentaComponent } from './nueva-venta/nueva-venta.component';
 import { BusquedaProductosComponent } from './busqueda-productos/busqueda-productos.component';
 import { BotonComponent } from './boton/boton.component';
+import { BuscadorComponent } from './buscador/buscador.component';
 
 
 
@@ -41,7 +42,8 @@ import { BotonComponent } from './boton/boton.component';
         VentasListadoComponent,
         NuevaVentaComponent,
         BusquedaProductosComponent,
-        BotonComponent
+        BotonComponent,
+        BuscadorComponent
     ],
     imports: [
         CommonModule,

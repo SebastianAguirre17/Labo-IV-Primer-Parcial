@@ -84,4 +84,17 @@ export class DataService {
 
         return productos;
     }
+
+    buscarProducto(productos: ProductoModel[], termino: string): ProductoModel[] {
+        let prodArr: ProductoModel[] = [];
+        termino.toLowerCase();
+
+        for(let producto of productos) {
+            let descripcion = producto.descripcion.toLowerCase();
+            if(descripcion.indexOf(termino) >= 0)
+                prodArr.push(producto);
+
+        }
+        return prodArr;
+    }
 }

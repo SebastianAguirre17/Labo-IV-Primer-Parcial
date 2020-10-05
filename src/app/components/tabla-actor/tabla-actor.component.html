@@ -1,4 +1,4 @@
-<div class="card-columns animated fadeIn faster">
+<div class="card-columns">
     <div class="card" *ngFor="let actor of actores; let i = index" >
         <img [src]="actor.foto" class="card-img-top" alt="..." width="250" height="250" (click)="seleccionarActor(actor, i)">
         <div class="card-body">
