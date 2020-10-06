@@ -11,6 +11,8 @@ import { BusquedaProductosComponent } from './components/busqueda-productos/busq
 import { ProductoAltaComponent } from './components/producto-alta/producto-alta.component';
 import { VentasListadoComponent } from './components/ventas-listado/ventas-listado.component';
 import { NuevaVentaComponent } from './components/nueva-venta/nueva-venta.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegistroComponent } from './pages/registro/registro.component';
 
 const routes: Routes = [
     { path: '', component: BusquedaComponent },
@@ -22,6 +24,8 @@ const routes: Routes = [
     { path: 'actor/listado', component: ActorListadoComponent },
     { path: 'productos', component: ProductosComponent },
     // { path: 'busqueda', component: BusquedaProductosComponent },
+    { path: 'Login', component: LoginComponent },
+    { path: 'Registro', component: RegistroComponent },
     { path: 'productos/alta', component: ProductoAltaComponent },
     { path: 'buscados/:termino', component: BusquedaProductosComponent },
     { path: 'ventas/alta', component: NuevaVentaComponent },

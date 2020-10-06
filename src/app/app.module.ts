@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
@@ -15,10 +15,14 @@ import { DataService } from './services/data.service';
 import { AuthService } from './services/auth.service';
 
 import { environment } from 'src/environments/environment';
+import { RegistroComponent } from './pages/registro/registro.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        LoginComponent,
+        RegistroComponent
     ],
     imports: [
         BrowserModule,
@@ -28,7 +32,8 @@ import { environment } from 'src/environments/environment';
         ComponentsModule,
         HttpClientModule,
         AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFireAuthModule
+        AngularFireAuthModule,
+        ReactiveFormsModule
     ],
     providers: [
         AuthService,

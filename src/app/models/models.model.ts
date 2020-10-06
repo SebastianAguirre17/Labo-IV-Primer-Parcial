@@ -29,3 +29,28 @@ export class ProductoModel {
     precio: number;
     rutaDeFoto?: string;
 }
+
+export class UsuarioModel {
+    email: string;
+    password: string;
+}
+
+export type Roles = 'ADMIN' | 'INVITADO';
+
+export interface User {
+    uid: string;
+    email: string;
+    password?: string;
+    role?: Roles;
+    name?: string;
+}
+
+export class RoleValidator {
+    isAdmin(user: User): boolean {
+        return user.role === 'ADMIN';
+    }
+
+    isInvitado(user: User): boolean {
+        return user.role === 'INVITADO';
+    }
+}
