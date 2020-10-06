@@ -23,9 +23,10 @@ const routes: Routes = [
     { path: 'productos', component: ProductosComponent },
     // { path: 'busqueda', component: BusquedaProductosComponent },
     { path: 'productos/alta', component: ProductoAltaComponent },
+    { path: 'buscados/:termino', component: BusquedaProductosComponent },
     { path: 'ventas/alta', component: NuevaVentaComponent },
     { path: 'ventas/listado', component: VentasListadoComponent },
-    { path: '**', pathMatch: 'full', component: BusquedaComponent },
+    { path: '**', component: BusquedaComponent },
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-buscador',
@@ -9,12 +10,14 @@ export class BuscadorComponent implements OnInit {
 
     @Output() eventoBuscarProducto = new EventEmitter();
     
-    constructor() { }
+    constructor(private router: Router) { }
 
     ngOnInit(): void {
     }
 
     buscarProducto(terminoDeBusqueda: string) {
-        console.log(terminoDeBusqueda);
+        if(terminoDeBusqueda.length < 2)
+            return;
+        this.router.navigate(['/buscados', terminoDeBusqueda])
     }
 }
