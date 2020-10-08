@@ -74,7 +74,7 @@ export class ActorAltaComponent implements OnInit {
         const actor = new ActorModel();
         actor.nombre = this.forma.get('nombre').value;
         actor.sexo = this.forma.get('sexo').value;
-        actor.fecha_nacimiento = this.forma.get('fecha').value;
+        actor.fecha_de_nac = this.forma.get('fecha').value;
         actor.nacionalidad = this.pais.name;
 
         Swal.fire({

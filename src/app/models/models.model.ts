@@ -7,7 +7,7 @@ export class ActorModel {
     nombre: string;
     apellido: string;
     sexo: string;
-    fecha_nacimiento: string;
+    fecha_de_nac: string;
     foto: string;
     nacionalidad?: string;
 }
