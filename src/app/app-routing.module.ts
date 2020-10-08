@@ -13,11 +13,13 @@ import { VentasListadoComponent } from './components/ventas-listado/ventas-lista
 import { NuevaVentaComponent } from './components/nueva-venta/nueva-venta.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
 
 const routes: Routes = [
     { path: '', component: BusquedaComponent },
     { path: 'bienvenido', component: BienvenidoComponent },
     { path: 'busqueda', component: BusquedaComponent },
+    // { path: 'paises', component: TablaPaisesComponent },
     { path: 'peliculas/alta', component: PeliculaAltaComponent },
     { path: 'peliculas/listado', component: PeliculasListadoComponent },
     { path: 'actor/alta', component: ActorAltaComponent },

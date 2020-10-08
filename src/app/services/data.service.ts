@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ActorModel, PeliculaModel, ProductoModel } from '../models/models.model';
+import { ActorModel, PaisModel, PeliculaModel, ProductoModel } from '../models/models.model';
 
 @Injectable({
     providedIn: 'root'
@@ -85,6 +85,22 @@ export class DataService {
         return productos;
     }
 
+    crearArrDePaises(paisesObj: Object) {
+        const paises: PaisModel[] = [];
+
+        if (paisesObj === null)
+            return [];
+
+        Object.keys(paisesObj).forEach(key => {
+            const pais: PaisModel = paisesObj[key];
+            pais.id = key;
+
+            paises.push(pais);
+        })
+
+        return paises;
+    }
+
     buscarProducto(productos: ProductoModel[], termino: string): ProductoModel[] {
         let prodArr: ProductoModel[] = [];
         termino.toLowerCase();
@@ -96,5 +112,9 @@ export class DataService {
 
         }
         return prodArr;
+    }
+    
+    peticionHttp(path: string) {
+        return this.http.get(path);
     }
 }

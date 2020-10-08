@@ -1,0 +1,22 @@
+<table class="table table-hover table-bordered animated fadeIn faster">
+    <thead class="thead-dark">
+        <tr>
+            <!-- <th scope="col">Id</th> -->
+            <th scope="col">Nombre</th>
+            <th scope="col">Codigo</th>
+            <!-- <th scope="col">Fecha de Estreno</th>
+            <th scope="col">Cantidad de Público</th> -->
+            <th scope="col">Foto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pais of paises; let i = index" (click)="seleccionarPais(pais, i)">
+            <!-- <th> {{ pelicula.id }} </th> -->
+            <td> {{ pais.name }} </td>
+            <td> {{ pais.alpha3Code }} </td>
+            <!-- <td> {{ pais.fecha_de_estreno }} </td>
+            <td> {{ pais.cantidad_de_publico }} </td> -->
+            <td> <img [src]="pais.flag" alt="" width="100" height="100"></td>
+        </tr>
+    </tbody>
+</table>

@@ -2,10 +2,14 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <app-tabla-pelicula [peliculas]="peliculas"
+                <!-- <app-tabla-pelicula [peliculas]="peliculas"
                                     (peliculaSeleccionada)="tomarPeliculaParaDetalles($event)"
                                     (indexPeliculaSeleccionada)="tomarIndexPelicula($event)">
-                </app-tabla-pelicula>
+                </app-tabla-pelicula> -->
+                <app-tabla-paises     [paises]="paises"
+                                    (paisSeleccionado)="tomarPaisParaDetalles($event)"
+                                    (indexpaisSeleccionado)="tomarIndexPais($event)">
+                </app-tabla-paises>
             </div>
         </div>
     </div>

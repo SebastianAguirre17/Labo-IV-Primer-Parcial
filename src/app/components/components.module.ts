@@ -21,6 +21,7 @@ import { NuevaVentaComponent } from './nueva-venta/nueva-venta.component';
 import { BusquedaProductosComponent } from './busqueda-productos/busqueda-productos.component';
 import { BotonComponent } from './boton/boton.component';
 import { BuscadorComponent } from './buscador/buscador.component';
+import { TablaPaisesComponent } from './tabla-paises/tabla-paises.component';
 
 
 
@@ -43,7 +44,8 @@ import { BuscadorComponent } from './buscador/buscador.component';
         NuevaVentaComponent,
         BusquedaProductosComponent,
         BotonComponent,
-        BuscadorComponent
+        BuscadorComponent,
+        TablaPaisesComponent
     ],
     imports: [
         CommonModule,
@@ -61,7 +63,16 @@ import { BuscadorComponent } from './buscador/buscador.component';
         TablaPeliculaComponent,
         DetallePeliculaComponent,
         BienvenidoComponent,
-        FormsModule
+        TablaActorComponent,
+        TablaProductosComponent,
+        ProductosComponent,
+        ProductoAltaComponent,
+        VentasListadoComponent,
+        NuevaVentaComponent,
+        BusquedaProductosComponent,
+        BotonComponent,
+        BuscadorComponent,
+        TablaPaisesComponent
     ]
 })
 export class ComponentsModule { }

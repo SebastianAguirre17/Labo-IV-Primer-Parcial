@@ -1,1 +1,65 @@
-<p>actor-alta works!</p>
+<div class="row">
+    <div class="col-5 p-5">
+        <h1>Alta de Actor</h1>
+        <hr>
+        <form autocomplete="off" [formGroup]="forma" (ngSubmit)="guardar()">
+
+            <div class="form-group row">
+                <label class="col-4 col-form-label" [class.text-danger]="nombreNoValido">Nombre</label>
+                <div class="col">
+                    <input class="form-control" type="text" placeholder="Nombre" formControlName="nombre"
+                        [class.is-invalid]="nombreNoValido">
+                    <small *ngIf="nombreNoValido" class="text-danger">Nombre Incorrecto</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-4 col-form-label" [class.text-danger]="apellidoNoValido">Apellido</label>
+                <div class="col">
+                    <input class="form-control" type="text" placeholder="Apellido" formControlName="apellido"
+                        [class.is-invalid]="apellidoNoValido">
+                    <small *ngIf="apellidoNoValido" class="text-danger">Apellido Incorrecto</small>
+                </div>
+            </div>
+            <div class="form-group row ">
+                <label class="col-4 col-form-label">Sexo</label>
+                <div class="col">
+                    <select class="form-control" formControlName="sexo">
+                        <option value="m"> Hombre </option>
+                        <option value="f"> Mujer </option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-4 col-form-label" [class.text-danger]="fechaNoValida">Fecha de Nacimiento</label>
+                <div class="col">
+                    <input class="form-control" type="date" placeholder="Fecha de Nacimiento" formControlName="fecha"
+                        [class.is-invalid]="fechaNoValida">
+                    <small *ngIf="fechaNoValida" class="text-danger">Fecha de Nacimiento Incorrecta</small>
+                </div>
+            </div>
+          
+            <div class="form-group row">
+                <label class="col-4 col-form-label" [class.text-danger]="paisNoValido">Nacionalidad</label>
+                <div class="col">
+                    <input class="form-control" type="text" placeholder="Nacionalidad" formControlName="nacionalidad"
+                        [class.is-invalid]="paisNoValido" disabled>
+                    <small *ngIf="paisNoValido" class="text-danger">Pais Incorrecto</small>
+                </div>
+            </div>
+            <div class="form-group row mt-5">
+                <label class="col-12 col-form-label">&nbsp;</label>
+                <div class="input-group col-md">
+                    <button type="submit" class="btn btn-outline-dark btn-block"> Guardar </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-7 p-5">
+        <h1>Actores</h1>
+        <hr>
+        <app-tabla-paises   [paises]="paises"
+                            (paisSeleccionado)="tomarPais($event)">
+        </app-tabla-paises>
+    </div>
+</div>

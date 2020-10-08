@@ -9,6 +9,7 @@ export class ActorModel {
     sexo: string;
     fecha_nacimiento: string;
     foto: string;
+    nacionalidad?: string;
 }
 
 export class PeliculaModel {
@@ -53,4 +54,11 @@ export class RoleValidator {
     isInvitado(user: User): boolean {
         return user.role === 'INVITADO';
     }
+}
+
+export class PaisModel {
+    id?: string;
+    name?: string;
+    alpha3Code?: string;
+    flag?: string;
 }
