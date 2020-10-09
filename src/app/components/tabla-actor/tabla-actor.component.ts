@@ -10,6 +10,7 @@ export class TablaActorComponent implements OnInit {
 
     @Input() actores: ActorModel[] = [];
     @Output() eventoActorSeleccionado = new EventEmitter<ActorModel>();
+    @Output() eventoIndexSeleccionado = new EventEmitter<number>();
 
     constructor() { }
 
@@ -19,6 +20,7 @@ export class TablaActorComponent implements OnInit {
     seleccionarActor(actor: ActorModel, index: number) {
         // console.log(index);
         this.eventoActorSeleccionado.emit(actor);
+        this.eventoIndexSeleccionado.emit(index);
     }
 
 }

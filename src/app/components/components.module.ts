@@ -22,6 +22,8 @@ import { BusquedaProductosComponent } from './busqueda-productos/busqueda-produc
 import { BotonComponent } from './boton/boton.component';
 import { BuscadorComponent } from './buscador/buscador.component';
 import { TablaPaisesComponent } from './tabla-paises/tabla-paises.component';
+import { DetalleActorComponent } from './detalle-actor/detalle-actor.component';
+import { EditarActorComponent } from './editar-actor/editar-actor.component';
 
 
 
@@ -45,7 +47,9 @@ import { TablaPaisesComponent } from './tabla-paises/tabla-paises.component';
         BusquedaProductosComponent,
         BotonComponent,
         BuscadorComponent,
-        TablaPaisesComponent
+        TablaPaisesComponent,
+        DetalleActorComponent,
+        EditarActorComponent
     ],
     imports: [
         CommonModule,
@@ -72,7 +76,9 @@ import { TablaPaisesComponent } from './tabla-paises/tabla-paises.component';
         BusquedaProductosComponent,
         BotonComponent,
         BuscadorComponent,
-        TablaPaisesComponent
+        TablaPaisesComponent,
+        DetalleActorComponent,
+        EditarActorComponent
     ]
 })
 export class ComponentsModule { }

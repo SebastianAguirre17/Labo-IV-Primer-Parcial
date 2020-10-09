@@ -76,6 +76,7 @@ export class ActorAltaComponent implements OnInit {
         actor.sexo = this.forma.get('sexo').value;
         actor.fecha_de_nac = this.forma.get('fecha').value;
         actor.nacionalidad = this.pais.name;
+        actor.foto = 'https://i.stack.imgur.com/4powQ.gif';
 
         Swal.fire({
             title: 'Espere ...',

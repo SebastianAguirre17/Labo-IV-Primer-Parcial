@@ -16,7 +16,7 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
 
 const routes: Routes = [
-    { path: '', component: BusquedaComponent },
+    { path: '', component: ActorListadoComponent },
     { path: 'bienvenido', component: BienvenidoComponent },
     { path: 'busqueda', component: BusquedaComponent },
     // { path: 'paises', component: TablaPaisesComponent },
@@ -32,7 +32,7 @@ const routes: Routes = [
     { path: 'buscados/:termino', component: BusquedaProductosComponent },
     { path: 'ventas/alta', component: NuevaVentaComponent },
     { path: 'ventas/listado', component: VentasListadoComponent },
-    { path: '**', component: BusquedaComponent },
+    { path: '**', component: ActorListadoComponent },
 ];
 
 @NgModule({

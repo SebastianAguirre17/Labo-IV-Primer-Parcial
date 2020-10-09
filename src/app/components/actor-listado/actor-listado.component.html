@@ -2,7 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <app-tabla-actor  [actores]="actores"></app-tabla-actor>
+                <app-tabla-actor [actores]="actores" (eventoActorSeleccionado)="tomarActorParaDetalles($event)"
+                    (eventoIndexSeleccionado)="tomarIndexActor($event)">
+                </app-tabla-actor>
             </div>
         </div>
     </div>
@@ -10,7 +12,13 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            
+            <app-detalle-actor [actor]="actor" (eventoBorrarActor)="borrarActor($event)">
+            </app-detalle-actor>
         </div>
-    </div> 
-</div> 
+        <div class="col">
+            <app-editar-actor   [actor]="actor"
+                                (eventoEditarActor)="editarActor($event)"></app-editar-actor>
+
+        </div>
+    </div>
+</div>
