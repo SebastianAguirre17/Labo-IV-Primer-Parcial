@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
-import { clearScreenDown } from 'readline';
+
 import { ActorModel } from 'src/app/models/models.model';
 import { DataService } from 'src/app/services/data.service';
 import Swal from 'sweetalert2';
