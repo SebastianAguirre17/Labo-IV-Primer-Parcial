@@ -9,9 +9,6 @@
                 <h5 class="card-title"> {{ actor.sexo | uppercase }} </h5>
                 <p class="card-text"> Nacimiento: {{ actor.fecha_de_nac }} </p>
                 <p class="card-text" *ngIf="actor.nacionalidad"> Nacionalidad: {{ actor?.nacionalidad }} </p>
-                <button class="btn btn-danger btn-block" (click)="borrarActor(actor.id)">
-                    <i class="fas fa-trash"></i> Borrar
-                </button>
             </div>
         </div>
     </div>

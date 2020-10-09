@@ -24,6 +24,7 @@ import { BuscadorComponent } from './buscador/buscador.component';
 import { TablaPaisesComponent } from './tabla-paises/tabla-paises.component';
 import { DetalleActorComponent } from './detalle-actor/detalle-actor.component';
 import { EditarActorComponent } from './editar-actor/editar-actor.component';
+import { BorrarActorComponent } from './borrar-actor/borrar-actor.component';
 
 
 
@@ -49,7 +50,8 @@ import { EditarActorComponent } from './editar-actor/editar-actor.component';
         BuscadorComponent,
         TablaPaisesComponent,
         DetalleActorComponent,
-        EditarActorComponent
+        EditarActorComponent,
+        BorrarActorComponent
     ],
     imports: [
         CommonModule,
